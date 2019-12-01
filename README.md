@@ -86,14 +86,14 @@ https://3hack.com/tools/85.html<br>
 设置A记录 dns28.xxx.com到Kail<br>
 服务端设置<br>
 cat /etc/dns2tcpd.conf<br>
-`listen = 0.0.0.0<br>
+listen = 0.0.0.0<br>
 port = 53<br>
 user = nobody<br>
 chroot = /tmp<br>
 domain = dns28.xxx.com<br>
-resources = c2:127.0.0.1:5353 , ssh:127.0.0.1:22 , smtp:127.0.0.1:25`<br>
-服务端运行：root@kali:~# dns2tcpd -f /etc/dns2tcpd.conf -F -d 1<br><br>
+resources = c2:127.0.0.1:5353 , ssh:127.0.0.1:22 , smtp:127.0.0.1:25<br>
+服务端运行：root@kali:~# dns2tcpd -f /etc/dns2tcpd.conf -F -d 1<br>
 https://github.com/synjkc/backdoor/blob/master/dns2tcpc_client_win.zip<br>
 客户端运行：<br>
-dns2tcpc -r ssh -z dns28.xxx.com 192.168.1.28 -l 8888 -d 2<br><br>
+dns2tcpc -r ssh -z dns28.xxx.com 192.168.1.28 -l 8888 -d 2<br>
 本地win10运行[c:\~]$ ssh 127.0.0.1 2222，即可连接到Kali<br>
