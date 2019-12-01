@@ -80,12 +80,12 @@ Kali上安装控制端<br>
 ./setup.sh client<br>
 项目地址：https://github.com/f0rb1dd3n/Reptile<br>
 https://carlstar.club/2019/04/09/rep/#on-vulnerable-ubuntu-192-168-5-148<br>
-https://3hack.com/tools/85.html
+https://3hack.com/tools/85.html<br>
 *******************************************************************<br>
 6、服务端Kali 192.168.1.28,自带dns2tcp工具<br>
 设置A记录 dns28.xxx.com到Kail<br>
 服务端设置<br>
-root@kali:~# cat /etc/dns2tcpd.conf<br>
+cat /etc/dns2tcpd.conf<br>
 listen = 0.0.0.0<br>
 port = 53<br>
 user = nobody<br>
